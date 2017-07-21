@@ -1,14 +1,29 @@
-SUBMIT_SELECTOR = "[data-submit-me]";
+var COFFEE_ORDER_FORM = "[data-coffee-order]";
 
-function getOrderName () {
-    var orderName = document.getElementById("coffeeOrder");
-    return orderName;
+function setUpFormListener() {
+    var theForm = document.querySelector(COFFEE_ORDER_FORM);
+    theForm.addEventListener('submit', function (event) {
+        event.preventDefault();
+        console.log(theForm.elements);
+        console.log(theForm.elements.coffeeOrder.value);
+        console.log(theForm.elements.emailInput.value);
+        console.log(theForm.elements.size.value);
+    })
 }
 
-console.log(getOrderName());
+setUpFormListener();
 
-var formInputArray = document.getElementsByClassName()
+// function getOrderName () {
+//     var orderName = document.getElementById("coffeeOrder");
+//     return orderName;
+// }
 
-function submitEventHandler() {
-    var buddin = document.querySelector(SUBMIT_SELECTOR);
-}
+// console.log(getOrderName());
+
+// var formInputArray = document.getElementsByClassName()
+
+// function submitEventHandler() {
+//     var buddin = document.querySelector(SUBMIT_SELECTOR);
+//     event.preventDefault();
+//     buddin.addEventListener('click', document.forms["[data-coffee-order='form'"].submit);
+// }
