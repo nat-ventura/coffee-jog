@@ -8,8 +8,14 @@ function setUpFormListener() {
         console.log(theForm.elements.coffeeOrder.value);
         console.log(theForm.elements.emailInput.value);
         console.log(theForm.elements.size.value);
+        console.log(theForm.elements.flavorShot.value);
+        console.log(theForm.elements.strength.value);
+        // console.log(theForm.elements.)
     })
 }
+
+// now you need to take those values and add them to localStorage
+// which is built into the browser
 
 setUpFormListener();
 
