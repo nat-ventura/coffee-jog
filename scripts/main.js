@@ -5,12 +5,11 @@ function setUpFormListener() {
     theForm.addEventListener('submit', function (event) {
         event.preventDefault();
         console.log(theForm.elements);
-        console.log(theForm.elements.coffeeOrder.value);
-        console.log(theForm.elements.emailInput.value);
-        console.log(theForm.elements.size.value);
-        console.log(theForm.elements.flavorShot.value);
-        console.log(theForm.elements.strength.value);
-        // console.log(theForm.elements.)
+        localStorage.setItem('orderName', JSON.stringify(theForm.elements.coffeeOrder.value));
+        localStorage.setItem('emailInput', JSON.stringify(theForm.elements.emailInput.value));
+        localStorage.setItem('size', JSON.stringify(theForm.elements.size.value));
+        localStorage.setItem('flavorShot', JSON.stringify(theForm.elements.flavorShot.value));
+        localStorage.setItem('strength', JSON.stringify(theForm.elements.strength.value));
     })
 }
 
